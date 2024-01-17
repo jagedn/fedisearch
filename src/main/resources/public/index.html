@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>FediSearch</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to FediSearch</h1>
+    <p>Discover new users to feed your timeline</p>
+</header>
+
+<div class="main">
+    <h3 style="text-align: center;">Semantic search for users in the Fediverse</h3>
+    <h3 style="text-align: center;">(Current stats: instances <span id="instances"></span>, users <span id="users"></span>)</h3>
+    <form action="#" id="target">
+        <div class="form-group">
+            <label for="search">Your interest</label>
+            <input type="text" class="form-control" id="search" name="search" aria-describedby="searchHelp" placeholder="People how love cats" required>
+            <small id="searchHelp" class="form-text text-muted">A semantic search.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <h3 class="text-center"><b>Matched</b></h3>
+    <hr>
+    <table class="table table-bordered table-striped" id="table-list">
+        <thead>
+        <tr class="bg-primary bg-gradient text-white">
+            <th class="text-capitalize text-center py-1 px-2">#</th>
+            <th class="text-capitalize text-center py-1 px-2">name</th>
+            <th class="text-capitalize text-center py-1 px-2">instance</th>
+            <th class="text-capitalize text-center py-1 px-2">bio</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center" id="loader">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
